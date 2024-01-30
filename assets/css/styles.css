@@ -1,0 +1,349 @@
+*{
+    --grey: #ddd;
+    --bg-grey: #f7f7f7;
+    --black: #000;
+    --btn-bg: #bba99d;
+    --white: #ffff;
+    --b-heading: #202020;
+}
+
+body{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*    =================================================================     */
+/*                            HEADER SECTION                                */
+/*    =================================================================     */
+
+/*---------- Primary Nav ----------*/
+
+[role="search"]{
+    width: 530px;
+    margin-left: 30px;
+    height: 45px;
+}
+
+[role="search"] .btn{
+    border-radius: 0;
+    background-color: var(--btn-bg);
+    border-color: var(--btn-bg);
+    color: var(--white);
+    padding: 6px 20px;
+}
+
+[role="search"] .btn .fa{
+    font-size: large;
+}
+
+[role="search"] .form-control{
+    border-radius: 0;
+    border-color: var(--grey);
+    color: var(--black);
+    background-color: var(--bg-grey);
+}
+
+.primary-nav .nav-item{
+    margin-left: 30px;
+    border: 1px solid var(--grey);
+    background-color: var(--bg-grey);
+}
+
+.primary-nav .nav-item .nav-link{
+    width: 110px;
+    padding-left: 15px !important;
+}
+
+.primary-nav .dropdown-toggle::after{
+    margin-left: 30px;
+}
+
+.primary-nav .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--btn-bg) !important;
+}
+
+/*---------- Main Nav ----------*/
+
+
+.nav-wrapper{
+    background-color: var(--black);
+}
+
+.nav-wrapper .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--white);
+}
+
+.nav-wrapper .nav-item .nav-link{
+    color: var(--white);
+    padding-right: 35px;
+}
+
+.nav-wrapper .dropdown:hover .dropdown-menu{
+    display: block !important;
+    top: 160%
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 120%;
+}
+
+.icon-list .nav-item .nav-link{
+    padding-right: 20px;
+}
+
+.icon-list .fa{
+    color: var(--btn-bg);
+    font-size: 16px;
+}
+
+/*---------- Hero Section ----------*/
+
+.carousel-indicators [data-bs-target]{
+    background-color: var(--black);
+    opacity: 1;
+    height: 2px;
+    transition: opacity 0.4s ease 0s;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--btn-bg);
+}
+
+.carousel-indicators{
+    margin-bottom: 4rem;
+}
+
+.carousel-control-next, .carousel-control-prev{
+    opacity: 1;
+}
+
+.carousel-control-prev-icon {
+    background-image: none; /* or specify a new image URL */
+}
+
+.carousel-control-prev-icon .fa-angle-left{
+    font-size: 20px;
+    background-color: rgba(0,0,0,.2);
+    padding: 15px 18px;
+}
+
+.carousel-control-next-icon {
+    background-image: none;
+}
+
+.carousel-control-next-icon .fa-angle-right{
+    font-size: 20px;
+    background-color: rgba(0,0,0,.2);
+    padding: 15px 18px;
+}
+
+.carousel-caption{
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    margin: -109px auto 0;
+    text-align: left;
+    color: #000;
+    padding-top: 0;
+}
+
+.carousel-caption h2{
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.carousel-caption span {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.carousel-caption p{
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.carousel-caption li{
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+.carousel-caption li a{
+    text-decoration: none;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 12px 25px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/*    =================================================================     */
+/*                            MAIN SECTION                                  */
+/*    =================================================================     */
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.text-container{
+    max-width: 70%;
+}
+
+.text {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transform: translateY(100%); 
+    transition: transform 0.5s ease-in-out;
+}
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--black);
+    margin-top: 20px;
+    padding: 12px 15px;
+    font-weight: 600;
+    font-size: 12px;
+    transform: translateY(100%); 
+    transition: transform 0.5s ease-in-out;
+}
+
+.img-container img {
+    transition: transform 0.5s ease-in-out; 
+    overflow: hidden;
+}
+
+.img-container:hover img {
+    transform: scale(1.2); 
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+}
+
+.img-container:hover .text {
+    transform: translateY(0); 
+}
+
+.img-container:hover .link {
+    transform: translateY(0); 
+}
+
+.centered-title {
+    position: relative;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.centered-title h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: var(--b-heading);
+    padding: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.centered-title h2::before{
+    top: 0;
+}
+
+.centered-title h2::after{
+    bottom: 0;
+}
+
+.centered-title h2::before, .centered-title h2::after{
+    width: 100px;
+    display: inline-block;
+    clear: both;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    height: 1px;
+    content: '';
+    background-color: var(--btn-bg);
+}
+
+em {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-img {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.card-overlay ul {
+    display: flex;
+    align-items: center;
+}
+
+.card-overlay ul li {
+    list-style-type: none;
+}
+  
+@media screen and (max-width: 991px) {
+
+    [role="search"]{
+        margin-left: 0;
+        width: auto;
+    }
+
+    .primary-nav .nav-item{
+        margin-left: 0;
+        width: auto;
+    }
+
+    .icon-display{
+        display: flex !important;
+        flex-direction: row;
+    }
+
+
+    
+    
+  }
+  
